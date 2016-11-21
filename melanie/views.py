@@ -4,6 +4,7 @@ from rest_framework.generics import CreateAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import MoleSerializer
+import os
 
 from .classifier import classify
 # Create your views here.
@@ -15,6 +16,7 @@ class UploadMole(CreateAPIView):
 			serializer.save()
 			image_location = serializer.data['image']
 			response = classify(image_location)
+			os.remove(image_location)
 			print(response, type(response))
 			return JsonResponse(response)
 		
