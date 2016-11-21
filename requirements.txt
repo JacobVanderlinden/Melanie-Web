@@ -6,3 +6,4 @@ gunicorn==19.6.0
 Markdown==2.6.7
 psycopg2==2.6.2
 whitenoise==3.2
+-e https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp27-none-linux_x86_64.whl
