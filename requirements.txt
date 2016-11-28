@@ -1,4 +1,4 @@
+pip==9.0.1
 Django==1.9.2
 djangorestframework==3.5.3
-pillow==3.4.2
 https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc2-cp27-none-linux_x86_64.whl
