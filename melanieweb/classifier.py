@@ -9,10 +9,10 @@ def classify(image_path):
 
     # Loads label file, strips off carriage return
     label_lines = [line.rstrip() for line 
-                       in tf.gfile.GFile("melanie/Classifier/retrained_labels.txt")]
+                       in tf.gfile.GFile("melanieweb/Classifier/retrained_labels.txt")]
 
     # Unpersists graph from file
-    with tf.gfile.FastGFile("melanie/Classifier/retrained_graph.pb", 'rb') as f:
+    with tf.gfile.FastGFile("melanieweb/Classifier/retrained_graph.pb", 'rb') as f:
         graph_def = tf.GraphDef()
         graph_def.ParseFromString(f.read())
         _ = tf.import_graph_def(graph_def, name='')
